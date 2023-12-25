@@ -31,6 +31,7 @@ pipeline {
             steps {
                 script {
                     gv.deployApp()
+                    echo "Deployed on $BRANCH_NAME"
                 }
             }
         }

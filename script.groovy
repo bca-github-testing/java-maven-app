@@ -13,7 +13,6 @@ def buildImage() {
 
 def deployApp() {
     echo 'Deploying the application...'
-    echo "Deployed on $BRANCH_NAME"
 } 
 
 
