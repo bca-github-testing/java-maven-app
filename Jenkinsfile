@@ -6,7 +6,7 @@ pipeline {
         maven 'Maven'
     }
     stages {
-        stage("init") {
+        stage('init') {
             steps {
                 script {
                     gv = load "script.groovy"
@@ -23,17 +23,16 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    gv.buildImage()
-                    }
+                    gv.buildImage()                     
                 }
             }
         }
-        stage("build image") {
+        stage("deploy") {
             steps {
                 script {
                     gv.deployApp()
-                    }
                 }
             }
-        }   
+        }
+    }   
 }
